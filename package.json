@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "sass": "^1.81.0"
+  },
+  "dependencies": {
+    "echarts": "^5.5.1"
+  }
+}

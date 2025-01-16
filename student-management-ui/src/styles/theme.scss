@@ -1,0 +1,100 @@
+// 亮色主题变量
+:root[data-theme='light'] {
+  --bg-color: #ffffff;
+  --main-bg-color: #f0f2f5;
+  --menu-bg: #304156;
+  --menu-text: #bfcbd9;
+  --menu-hover: #263445;
+  --menu-active: #409eff;
+  --text-color: #303133;
+  --border-color: #dcdfe6;
+  --hover-color: #f5f7fa;
+  --header-bg: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #ebeef5;
+  --table-header-bg: #f5f7fa;
+  --table-border: #ebeef5;
+  --table-stripe: #fafafa;
+}
+
+// 暗色主题变量
+:root[data-theme='dark'] {
+  --bg-color: #141414;
+  --main-bg-color: #1f1f1f;
+  --menu-bg: #304156;
+  --menu-text: #bfcbd9;
+  --menu-hover: #263445;
+  --menu-active: #409eff;
+  --text-color: #ffffff;
+  --border-color: #434343;
+  --hover-color: #1f1f1f;
+  --header-bg: #1f1f1f;
+  --card-bg: #1f1f1f;
+  --card-border: #303030;
+  --table-header-bg: #141414;
+  --table-border: #303030;
+  --table-stripe: #1a1a1a;
+}
+
+// 全局样式
+body {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+// Element Plus 组件主题适配
+.el-card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  color: #303133;
+}
+
+.el-table {
+  background-color: var(--card-bg);
+  color: #303133;
+  
+  th.el-table__cell {
+    background-color: var(--table-header-bg);
+  }
+  
+  td.el-table__cell {
+    border-color: var(--table-border);
+  }
+  
+  --el-table-tr-bg-color: var(--card-bg);
+  --el-table-striped-bg-color: var(--table-stripe);
+}
+
+.el-input__inner {
+  background-color: var(--bg-color);
+  color: #303133;
+  border-color: var(--border-color);
+}
+
+.el-select-dropdown {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  
+  .el-select-dropdown__item {
+    color: #303133;
+    
+    &.hover {
+      background-color: var(--hover-color);
+    }
+  }
+} 
+
+// 强制 Element Plus 组件跟随主题
+:root[data-theme='dark'] {
+  --el-bg-color: var(--bg-color);
+  --el-text-color-primary: var(--text-color);
+  --el-border-color: var(--border-color);
+  --el-text-color-regular: #e5e7eb;
+  --el-fill-color: #1f1f1f;
+  --el-fill-color-light: #1a1a1a;
+  --el-table-bg-color: var(--card-bg);
+  --el-table-tr-bg-color: var(--card-bg);
+  --el-table-header-bg-color: var(--table-header-bg);
+  --el-table-border-color: var(--table-border);
+}
